@@ -19,18 +19,20 @@ def generate_prompt():
         "Weather Conditions": words.weather_conditions,
     }
 
+    entry_quantifier = "a single portrait orientation image of "
+    exit_qualifier = " at 300 DPI with a transparent background"
     components = []
 
     for label, comp_list in component_lists.items():
-        if random.choice([True, True, False]):
+        if random.choice([True, False]):
             choice = random.choice(comp_list)
             component = {
+                "Emotions": f"{choice}",
                 "Artistic Styles": f"{choice} depiction",
                 "Subjects": f"of {choice}",
                 "Mediums": f"in {choice}",
                 "Color Palettes": f"using {choice}",
                 "Rendering Styles": f"with {choice} rendering style",
-                "Emotions": f"that's {choice}",
                 "Time of Day": f"at {choice}",
                 "Weather Conditions": f"in {choice} weather",
                 "Geographical Locations": f"in {choice} environment",
@@ -41,8 +43,8 @@ def generate_prompt():
             }.get(label, "")
             components.append(component)
 
-    return " ".join(components) if components else "No components selected."
-
+    # return entry_quantifier + " ".join(components) + exit_qualifier if components else "No components selected."
+    return entry_quantifier + " ".join(components) if components else "No components selected."
 
 if __name__ == "__main__":
     print(generate_prompt())
