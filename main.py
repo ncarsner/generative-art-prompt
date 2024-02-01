@@ -19,8 +19,8 @@ def generate_prompt():
         "Weather Conditions": words.weather_conditions,
     }
 
-    entry_quantifier = "a single portrait orientation image of "
-    exit_qualifier = " at 300 DPI with a transparent background"
+    # entry_quantifier = "a single portrait orientation image of "
+    # exit_qualifier = " at 300 DPI with a transparent background"
     components = []
 
     for label, comp_list in component_lists.items():
@@ -44,7 +44,8 @@ def generate_prompt():
             components.append(component)
 
     # return entry_quantifier + " ".join(components) + exit_qualifier if components else "No components selected."
-    return entry_quantifier + " ".join(components) if components else "No components selected."
+    # return entry_quantifier + " ".join(components) if components else "No components selected."
+    return " ".join(components) if components else "No components selected."
 
 if __name__ == "__main__":
     print(generate_prompt())
