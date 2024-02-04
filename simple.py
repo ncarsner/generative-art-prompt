@@ -16,14 +16,14 @@ def generate_prompt_simple():
     components = []
 
     for label, comp_list in component_lists.items():
-        if random.choice([True]):
+        if random.choice([True, True, True, False]):
             choice = random.choice(comp_list)
             component = {
-                "Color Palettes": f"{choice}",
-                "Artistic Styles": f"{choice}",
-                "Mediums": f"{choice}",
+                "Color Palettes": f"{choice},",
+                "Artistic Styles": f"{choice} style,",
+                "Mediums": f"{choice} medium,",
                 "Subject": f"{choice}",
-                "Shape": f"in the shape of a {choice}",
+                "Shape": f"as a {choice}",
             }.get(label, "")
             components.append(component)
 
