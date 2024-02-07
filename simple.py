@@ -20,8 +20,8 @@ def generate_prompt_simple():
             choice = random.choice(comp_list)
             component = {
                 "Color Palettes": f"{choice},",
-                "Artistic Styles": f"{choice} style,",
-                "Mediums": f"{choice} medium,",
+                "Artistic Styles": f"{choice},",
+                "Mediums": f"{choice},",
                 "Subject": f"{choice}",
                 "Shape": f"as a {choice}",
             }.get(label, "")

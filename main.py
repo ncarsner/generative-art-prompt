@@ -48,4 +48,5 @@ def generate_prompt():
     return " ".join(components) if components else "No components selected."
 
 if __name__ == "__main__":
-    print(generate_prompt())
+    for c, i in enumerate(range(10),start=1):
+        print(c, generate_prompt())
