@@ -493,7 +493,7 @@ subjects = [
     "abacus",
     "abstract shape",
     # "an abstract concept",
-    "agave planet",
+    "agave plant",
     "animal",
     "historical figure",
     "instrument",
