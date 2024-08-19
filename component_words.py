@@ -1075,7 +1075,6 @@ subjects = [
     # "skin",
     "sky",
     "skyscraper",
-    "skyscraper",
     # "sleep",
     # "slice",
     "slide",

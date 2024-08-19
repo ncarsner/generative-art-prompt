@@ -29,7 +29,7 @@ def generate_prompt_simple():
 
     # return entry_quantifier + " ".join(components) + exit_qualifier if components else "No components selected."
     # return entry_quantifier + " ".join(components) if components else "No components selected."
-    return " ".join(components) if components else "No components selected."
+    return " ".join(components) + ", vertical aspect ratio" if components else "No components selected."
 
 if __name__ == "__main__":
     for _ in range(10):
